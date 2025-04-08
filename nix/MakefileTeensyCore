@@ -1,0 +1,17 @@
+include flags.mk
+
+CPPFLAGS += -I.
+CXXFLAGS += -std=gnu++17
+
+C_FILES := $(wildcard *.c)
+CPP_FILES := $(wildcard *.cpp)
+OBJS := $(C_FILES:.c=.o) $(CPP_FILES:.cpp=.o)
+
+C_FILES   := $(wildcard *.c)
+CPP_FILES := $(wildcard *.cpp)
+OBJS      := $(C_FILES:.c=.o) $(CPP_FILES:.cpp=.o)
+
+libteensy-core.a: $(OBJS)
+	ar rvs $@ $(OBJS)
+
+all: libteensy-core.a
