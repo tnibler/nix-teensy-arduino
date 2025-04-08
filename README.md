@@ -18,4 +18,6 @@ No support provided, I don't understand nix either lol. If you have improvements
 
 ## License
 
+MIT Licensed.
+
 Based on: https://blog.kummerlaender.eu/article/reproducible_development_environment_teensy/
